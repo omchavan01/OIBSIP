@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #01161e;
+}
+
+.title {
+  height: 6vh;
+  width: 100%;
+  background-color: #aec3b0;
+}
+
+.title p {
+  font-size: 4.5vh;
+  margin-left: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-task-form {
+  margin: 5vh 0 14vh;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.newtaskinput {
+  width: 50vw;
+  padding: 0.7rem;
+  border-radius: 1rem;
+  margin-right: 5rem;
+  font-size: 1.3rem;
+  color: #aec3b0;
+  border: 1px solid #124559;
+}
+
+.new-task-submit {
+  color: #df00ff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.new-task-submit:hover,
+.edit:hover,
+.delete:hover {
+  opacity: 0.9;
+}
+
+.new-task-submit:active,
+.edit:active,
+.delete:active {
+  opacity: 0.7;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 2px solid #3a82ee;
+  margin-right: 0.5rem;
+}
+
+
+.check::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  background-color: #3a82ee;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+
+input:checked ~ .check::after {
+  width: 0.6rem;
+  height: 0.6rem;
+  opacity: 1;
+}
+
+.todo-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 80vw;
+  border-radius: 0.8rem;
+  border: 1px solid #124559;
+  padding: 0.7rem;
+}
+
+.todo-items label {
+  display: block;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.todo-content {
+  flex: 1 1 0%;
+}
+
+.todo-content input {
+  color: #aec3b0;
+  font-size: 1.3rem;
+  width: 50vw;
+  
+}
+
+.edit,
+.delete {
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.edit {
+  color: gold;
+}
+
+.delete {
+  color: red;
+}
+
+@media only screen and (max-width: 450px) {
+  .title {
+    height: 4vh;
+  }
+  .title p {
+    font-size: 3vh;
+  }
+
+  .new-task-form {
+    margin: 2vh 0 6vh;
+  }
+
+  .newtaskinput {
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    margin-right: 1rem;
+    font-size: 0.7rem;
+  }
+
+  .new-task-submit {
+    font-size: 0.7rem;
+  }
+
+  .check {
+    width: 0.4rem;
+    height: 0.4rem;
+    margin: 0 0.2rem;
+    border: 1px solid #3a82ee;
+  }
+
+  input:checked ~ .check::after {
+    width: 0.2rem;
+    height: 0.2rem;
+  }
+
+  .todo-items {
+    margin-bottom: 0.7rem;
+    border-radius: 0.6rem;
+    padding: 0.1rem;
+  }
+
+  .todo-content,
+  .actions {
+    position: relative;
+    bottom: 0.2rem;
+  }
+  .todo-items label {
+    margin-right: 0.4rem;
+  }
+
+  .todo-content input {
+    font-size: 0.5rem;
+  }
+
+  .edit,
+  .delete {
+    font-size: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 900px) {
+  .title {
+    height: 4.5vh;
+  }
+  .title p {
+    font-size: 3.7vh;
+  }
+
+  .new-task-form {
+    margin: 3vh 0 10vh;
+  }
+  .newtaskinput {
+    width: 45vw;
+    padding: 0.6rem;
+    border-radius: 0.8rem;
+    margin-right: 2rem;
+    font-size: 0.8rem;
+    color: #aec3b0;
+    border: 1px solid #124559;
+  }
+
+  .new-task-submit {
+    color: #df00ff;
+    font-size: 0.8rem;
+  }
+
+  .check {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin: 0 0.4rem;
+    border: 1.5px solid #3a82ee;
+  }
+
+  input:checked ~ .check::after {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+
+  .todo-items {
+    margin-bottom: 0.9rem;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+  }
+
+  .todo-items label {
+    margin-right: 0.6rem;
+  }
+
+  .todo-content input {
+    font-size: 0.8rem;
+  }
+
+  .edit,
+  .delete {
+    font-size: 0.8rem;
+    margin-right: 0.8rem;
+  }
+}

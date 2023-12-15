@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form name="signup-form" id="signup-form">
+        <h1 class="heading">Sign up</h1>
+        <div class="signup-input">
+          <div class="text-fields">
+            <input type="text" id="name" name="name" required  autocomplete ="off" placeholder=" Name"/>
+          </div>
+          <div class="text-fields">
+            <input type="text" id="uname" name="uname" required autocomplete="off" placeholder=" Username" />
+          </div>
+          <div class="text-fields">
+            <input type="password" id="pass"  name="pass" required autocomplete="off" placeholder=" Password" />
+          </div>
+        </div>
+          <button type="reset" class="submit" id="submit" onclick="saveData()">Continue</button>
+          <p>Already have an account? <a href="./index.html" id="signin-link">Sign in</a></p>
+      </form>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</html>
