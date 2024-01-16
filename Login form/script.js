@@ -36,24 +36,23 @@ function saveData() {
     ? JSON.parse(localStorage.getItem("users"))
     : [];
 
-  if (
-    user_records.some((e) => {
-      return username.length < 8 || password.length < 8;
-    })
-  ) {
+  if (username.length < 8 || password.length < 8) {
     alert("Length of username/password should be atleast 8 characters !!");
+    return;
   }
+
   if (
     user_records.some((e) => {
       return e.username == username;
     })
   ) {
     alert("User already exists in system !! Sign in to continue.");
+    return;
   } else {
     user_records.push({
-      "name": name,
-      "username": username,
-      "password": password
+      name: name,
+      username: username,
+      password: password,
     });
     localStorage.setItem("users", JSON.stringify(user_records));
   }
