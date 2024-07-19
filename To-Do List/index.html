@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do list</title>
-    <link rel="stylesheet" href="font-icons/css/all.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="title">
-      <p>To-do list</p>
-    </header>
-    <main>
-      <section>
-        <form class="new-task-form">
-          <input
-            maxlength="40"
-            type="text"
-            autocomplete="off"
-            class="newtaskinput"
-            name="newtaskinput"
-            placeholder="Something important!! Write here"
-          />
-          <input type="submit" class="new-task-submit" value="Add task" />
-        </form>
-      </section>
-      <!-- Used to display a task -->
 
-      <!-- <section class="todo-list">
-        <div class="list">
-          <div class="todo-items">
-            <label>
-              <input type="checkbox" />
-              <span class="check"></span>
-            </label>
-            <div class="todo-content">
-              <input class="todoinput" type="text" value="" readonly />
-            </div>
-            <div class="actions">
-              <button class="edit">Edit</button>
-              <button class="delete">Delete</button>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Do list</title>
+  <link rel="stylesheet" href="font-icons/css/all.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="title">
+    <p>To-do list</p>
+  </header>
+  <main>
+    <section>
+      <form class="new-task-form">
+        <input maxlength="95" type="text" autocomplete="off" class="newtaskinput" name="newtaskinput"
+          placeholder="Something important!! Write here" required />
+        <input type="submit" class="new-task-submit" value="Add task" />
+      </form>
+    </section>
+    <!-- Used to display a task -->
+
+    <section class="todo-list">
+      <div class="list">
+        <div class="todo-items">
+          <label>
+            <input type="checkbox" />
+            <span class="check"></span>
+          </label>
+          <div class="todo-content">
+            <input class="todoinput" type="text" value="" readonly />
+          </div>
+          <div class="actions">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
           </div>
         </div>
-      </section> -->
+      </div>
+    </section>
 
-      <section class="todo-list">
-        <div class="list"></div>
-      </section>
-    </main>
-    <script src="script.js"></script>
-  </body>
+    <section class="todo-list">
+      <div class="list"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
 </html>

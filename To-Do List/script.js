@@ -30,9 +30,10 @@ function DisplayTodos() {
     const actions = document.createElement("div");
     const edit = document.createElement("button");
     const deleteButton = document.createElement("button");
-    
+
     input.type = "checkbox";
     input.checked = todo.done;
+    input.disabled = todo.done;
     span.classList.add("check");
     content.classList.add("todo-content");
     actions.classList.add("actions");
@@ -54,24 +55,27 @@ function DisplayTodos() {
 
     if (todo.done) {
       todoItem.classList.add("done");
+      edit.addEventListener("click", () => {
+        edit.disabled = true;
+      });
     }
 
-    input.addEventListener("click", (e) => {
-      todo.done = e.target.checked;
-      localStorage.setItem("todos", JSON.stringify(todos));
-
-      if (todo.done) {
-        todoItem.classList.add("done");
-      } else {
-        todoItem.classList.remove("done");
+    input.addEventListener("click", () => {
+      if (!todo.done) {
+        todo.done = true;
+        localStorage.setItem("todos", JSON.stringify(todos));
+        if (todo.done) {
+          todoItem.classList.add("done");
+          input.disabled = true;
+          edit.disabled = true;
+        }
       }
-
-      DisplayTodos();
     });
 
     edit.addEventListener("click", (e) => {
       const input = content.querySelector("input");
       input.removeAttribute("readonly");
+      input.maxLength = 95;
       input.focus();
       input.addEventListener("blur", (e) => {
         input.setAttribute("readonly", true);

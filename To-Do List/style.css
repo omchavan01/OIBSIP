@@ -80,7 +80,6 @@ input[type="checkbox"] {
   margin-right: 0.5rem;
 }
 
-
 .check::after {
   content: "";
   display: block;
@@ -109,12 +108,6 @@ input:checked ~ .check::after {
   padding: 0.7rem;
 }
 
-.todo-items label {
-  display: block;
-  margin-right: 0.5rem;
-  cursor: pointer;
-}
-
 .todo-content {
   flex: 1 1 0%;
 }
@@ -122,8 +115,13 @@ input:checked ~ .check::after {
 .todo-content input {
   color: #aec3b0;
   font-size: 1.3rem;
-  width: 50vw;
-  
+  width: 60vw;
+}
+
+.todo-items label {
+  display: block;
+  margin-right: 0.5rem;
+  cursor: pointer;
 }
 
 .edit,
