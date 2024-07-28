@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
     <div class="container">
         <div class="details">
-        <h1 id="heading">Profile Page</h1>
-        <h3>Welcome User : 
-        <script>
-            document.write(localStorage.getItem("username"));
-        </script>
-        </h3>
-        <p>You have successfully logged in !!</p>
-        <button type="reset" class="logout" id="logout" onclick="logOut()">Log Out</button>
+            <h1 id="heading">Profile Page</h1>
+            <h3>Welcome User :
+                <script>
+                    document.write(localStorage.getItem("username"));
+                </script>
+            </h3>
+            <p>You have successfully logged in !!</p>
+            <button type="reset" class="logout" id="logout" onclick="logOut()">Log Out</button>
 
-    </div>
+        </div>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-    function logOut(){
-    localStorage.removeItem("username");
-    localStorage.removeItem("password");
-    window.location.href="index.html";
-}
+    function logOut() {
+        localStorage.removeItem("username");
+        localStorage.removeItem("password");
+        window.location.href = "index.html";
+    }
 </script>
+
 </html>

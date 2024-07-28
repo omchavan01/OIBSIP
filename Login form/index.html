@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Form</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <form name="signin-form">
-        <h1 class="heading">Sign in</h1>
-        <div class="signin-input">
-            <div class="text-fields">
-            <input type="text" id="uname" name="uname" required autocomplete="off" placeholder=" Username" />
-            </div>
-            <div class="text-fields">
-            <input type="password" id="pass"  name="pass" required autocomplete="off" placeholder=" Password" />
-            </div>
-          </div>
-          <button type="reset" class="submit" id="submit" onclick="loadData()">Continue</button>
-          <p>Don't have an account? <a href="./signup.html" id="signup-link">Sign up</a></p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <form name="signin-form">
+      <h1 class="heading">Sign in</h1>
+      <div class="signin-input">
+        <div class="text-fields">
+          <input type="text" id="uname" name="uname" required autocomplete="off" placeholder=" Username" />
         </div>
-      </form>
-    </div>
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="script.js"></script>
+        <div class="text-fields">
+          <input type="password" id="pass" name="pass" required autocomplete="off" placeholder=" Password" />
+        </div>
+      </div>
+      <button type="reset" class="submit" id="submit" onclick="loadData()">Continue</button>
+      <p>Don't have an account? <a href="./signup.html" id="signup-link">Sign up</a></p>
+  </div>
+  </form>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+
 </html>
